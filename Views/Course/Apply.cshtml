@@ -1,0 +1,54 @@
+@model Student
+
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apply</title>
+    <link rel="stylesheet" href="/modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+
+     <div class="container m-4">
+            <div class="card mx-auto" style="width:500px;">
+                <div class="card-header">
+                    Application Form
+                </div>
+                <div class="card-body">
+                     <form asp-action="apply" method="POST">
+                            <div asp-validation-summary="All"></div>
+                            <div class="form-group">
+                                <label asp-for="Name">Name</label>
+                                <input asp-for="Name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Email">Email</label>
+                                <input asp-for="Email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Phone">Phone</label>
+                                <input asp-for="Phone" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Confirm">Which course would you like to attend?</label>
+                                <select asp-for="Confirm" class="form-control">
+                                    <option value="true">Beginner (6 weeks)</option>
+                                    <option value="true">Intermediate (5 weeks)</option>
+                                    <option value="true">Advance (4 weeks)</option>
+                                </select>
+                            </div>
+                    
+                            <input type="submit" value="Submit" class="btn btn-primary btn-block">
+                        </form>
+                </div>
+            </div>
+        </div>
+
+    
+   
+
+</body>
+</html>
